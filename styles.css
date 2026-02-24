@@ -1,0 +1,199 @@
+/* Color pallet #CC0000 #004A00 #FFFFEC #F2D8AD #000000 */
+body,
+html {
+  font-family: "Georgia";
+  height: 100%;
+  margin: 0px;
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0;
+  height: 60px;
+  color: white;
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  color: #ffffec;
+  padding: 0 15px;
+  text-decoration: none;
+  font-size: 18pt;
+}
+
+li a:hover {
+  color: #cc0000;
+}
+#check,
+.drpdn-menu {
+  display: none;
+  position: right;
+}
+
+/* mobile style*/
+
+@media (max-width: 799px) {
+  /* Hide desktop nav */
+  .nav-menu {
+    display: none;
+  }
+  /* hamburger menu*/
+  .hamburger,
+  #check {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    opacity: 100;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .hamburger:hover {
+    background: red;
+  }
+
+  /*CHANGE ME TO 0 WHEN DONE*/
+  #check {
+    opacity: 0;
+  }
+
+  /*hamburger icon styling*/
+  .line {
+    display: block;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+  }
+
+  #dropdown {
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: auto;
+    max-width: 10%;
+    min-width: 4%;
+  }
+
+  .drpdn-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: center;
+    background-color: black;
+    height: auto;
+  }
+
+  .test {
+    padding: 10px;
+  }
+
+  #check:checked ~ #dropdown {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+}
+
+/*body with background image blur */
+.bg-image {
+  background-image: url(https://wcet.waketech.edu/bemcdowell/WEB210/Module07/Images/restaurant.jpg);
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  z-index: 0;
+}
+
+.bg-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.photorow-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-link {
+  text-decoration: none;
+  color: #ffffec;
+  font-size: 18pt;
+  background-color: #cc0000;
+  margin: auto;
+  padding: 15px;
+  display: block;
+  width: 140px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.order-link:hover {
+  color: #000000;
+  transform: scale(1.1);
+}
+
+h1 {
+  color: #ffffec;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+  color: #ffffec;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#lasagna,
+#pizza,
+#spaghetti,
+#salad {
+  width: 20%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  margin: 30px 10px 10px;
+  border: #ffffec solid 4px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  filter: brightness(105%);
+  filter: contrast(110%);
+  transition: transform 0.5s ease;
+}
+
+#lasagna:hover,
+#pizza:hover,
+#spaghetti:hover,
+#salad:hover {
+  transform: scale(1.3);
+}
